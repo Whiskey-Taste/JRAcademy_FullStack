@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Debugger Learning Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+
+        .debug-guide {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+
+        .step-item {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step-item:hover {
+            transform: translateX(10px);
+        }
+
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #007bff;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .step-content {
+            color: #666;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .step-item {
+                margin: 30px 0;
+                padding: 15px;
+            }
+
+            .step-item::before {
+                left: 50%;
+                top: -15px;
+                transform: translateX(-50%);
+            }
+
+            .step-item:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        #debugButton {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        #debugButton:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-guide">
+        <h1>Chrome Debugger Learning Guide</h1>
+        <button id="debugButton">Test Breakpoint</button>
+        <ol class="steps-list">
+            <li class="step-item">
+                <h3 class="step-title">Opening Chrome DevTools</h3>
+                <p class="step-content">Press F12 or right-click and select "Inspect" to open Developer Tools. On Mac, use Cmd + Option + I.</p>
+            </li>
+            <li class="step-item">
+                <h3 class="step-title">Using Elements Panel</h3>
+                <p class="step-content">Inspect and modify HTML structure and CSS styles in real-time. Try clicking the inspect element button in the top-left corner to select page elements.</p>
+            </li>
+            <li class="step-item">
+                <h3 class="step-title">Console Panel Debugging</h3>
+                <p class="step-content">Use console.log(), console.warn(), and other methods for debugging output. Execute JavaScript code directly in the console.</p>
+            </li>
+            <li class="step-item">
+                <h3 class="step-title">Breakpoint Debugging</h3>
+                <p class="step-content">Set breakpoints in the Sources panel, use Step Over, Step Into to control code execution flow. Click the button above to test breakpoint functionality.</p>
+            </li>
+            <li class="step-item">
+                <h3 class="step-title">Network Analysis</h3>
+                <p class="step-content">Use the Network panel to analyze resource loading times, sizes, and priorities. Test page performance under different network conditions.</p>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        // Debug demonstration function
+        function debugDemo(count) {
+            console.log('Starting debug demonstration');
+            let sum = 0;
+            
+            // You can set a breakpoint here
+            for(let i = 0; i < count; i++) {
+                sum += i;
+                console.log(`Current count: ${i}, Total sum: ${sum}`);
+            }
+            
+            return sum;
+        }
+
+        // Event listener for debug button
+        document.getElementById('debugButton').addEventListener('click', () => {
+            const result = debugDemo(5);
+            console.log('Debug demonstration completed, result:', result);
+        });
+
+        // Add some console messages for demonstration
+        console.log('Page loaded completely');
+        console.warn('This is a warning message example');
+        console.error('This is an error message example');
+    </script>
+</body>
+</html>
