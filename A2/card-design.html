@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card UI Design</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Card grid layout */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Course card styles */
+        .course-card {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        /* Course card background gradients */
+        .course-card.purple {
+            background: linear-gradient(135deg, #7264FF 0%, #5C4FF3 100%);
+        }
+
+        .course-card.blue {
+            background: linear-gradient(135deg, #45B1FF 0%, #3289FF 100%);
+        }
+
+        /* Course card content styles */
+        .course-content {
+            padding: 2rem;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .course-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        /* Testimonial card styles */
+        .testimonial-card {
+            flex: 1;
+            min-width: 400px;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card.highlighted {
+            background: #7264FF;
+            color: white;
+        }
+
+        /* User profile styles */
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .user-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .user-details p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .testimonial-card.highlighted .user-details p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .testimonial-card.highlighted .testimonial-text {
+            color: white;
+        }
+
+        /* Rating styles */
+        .rating {
+            color: #FFB800;
+            font-size: 1.2rem;
+            margin-left: auto;
+        }
+
+        /* Hover effects */
+        .course-card:hover,
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .learn-more:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .card-grid {
+                gap: 1rem;
+            }
+
+            .course-card,
+            .testimonial-card {
+                min-width: 100%;
+            }
+
+            .course-content {
+                padding: 1.5rem;
+            }
+
+            .course-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Course cards section -->
+        <div class="card-grid">
+            <div class="course-card purple">
+                <div class="course-content">
+                    <h2 class="course-title">UX Research</h2>
+                    <p class="course-description">UI enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a href="#" class="learn-more">LEARN MORE</a>
+                </div>
+            </div>
+            <div class="course-card blue">
+                <div class="course-content">
+                    <h2 class="course-title">Bootcamp</h2>
+                    <p class="course-description">UI enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a href="#" class="learn-more">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial cards section -->
+        <div class="card-grid">
+            <div class="testimonial-card">
+                <div class="user-info">
+                    <img src="./Bobby Jennings.webp" alt="Bobby Jennings" class="user-avatar">
+                    <div class="user-details">
+                        <h3>Bobby Jennings</h3>
+                        <p>UI/UX Designer & Creative Director</p>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+                <p class="testimonial-text">All users on MySpace will know that there are millions of people out there. Every day besides so many people joining this community, there are many others who will be looking out for friends.</p>
+            </div>
+            <div class="testimonial-card highlighted">
+                <div class="user-info">
+                    <img src="./Donald Bridges.webp" alt="Donald Bridges" class="user-avatar">
+                    <div class="user-details">
+                        <h3>Donald Bridges</h3>
+                        <p>Digital Artist & Design Consultant</p>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                </div>
+                <p class="testimonial-text">All users on MySpace will know that there are millions of people out there. Every day besides so many people joining this community, there are many others who will be looking out for friends.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
