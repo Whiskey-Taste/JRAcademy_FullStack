@@ -10,7 +10,6 @@
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 80px;
     max-width: 1200px;
@@ -18,9 +17,22 @@
     padding: 0 var(--space-md);
 }
 
+/* 确保Logo在左 */
+.nav-logo {
+    flex-shrink: 0;
+    margin-right: auto;  /* 推到最左边 */
+}
+
 .nav-logo img {
     height: 50px;
     max-width: 200px;
+}
+
+/* 让导航菜单居中 */
+.nav-menu-container {
+    flex: 1;  /* 让它占据中间空间 */
+    display: flex;
+    justify-content: center;  /* 让菜单居中 */
 }
 
 .nav-menu {
@@ -57,10 +69,10 @@
     width: 100%;
 }
 
+/* 预约咨询按钮在右 */
 .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
+    flex-shrink: 0;
+    margin-left: auto;  /* 推到最右边 */
 }
 
 .nav-toggle {
@@ -235,6 +247,12 @@
 
 /* 响应式适配 */
 @media screen and (max-width: 768px) {
+    .nav-container {
+        justify-content: center;
+        position: relative;
+    }
+
+    /* 隐藏 PC 端菜单 */
     .nav-menu {
         display: none;
         position: absolute;
@@ -242,19 +260,36 @@
         left: 0;
         width: 100%;
         background: white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* 显示移动端菜单 */
     .nav-menu.show-menu {
-        display: block; /* 让菜单可见 */
+        display: block;
     }
 
+    /* 左侧：汉堡菜单 */
     .nav-toggle {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
+    }
 
-    .footer-content {
-        flex-direction: column;
+    .nav-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 右侧：预约咨询按钮 */
+    .nav-actions {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .footer-section {
