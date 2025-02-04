@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>成功案例 | 某某移民公司</title>
+   <meta name="description" content="查看我们的EB1-A移民成功案例，了解申请经验和真实客户反馈">
+   <meta name="keywords" content="EB1-A成功案例,移民案例,客户评价,申请经验">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/global.css">
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/pages/cases.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="cases-page" data-page="cases">
+   <div class="page-wrapper">
+       <!-- 导航栏 -->
+       <header class="header">
+           <div class="nav-container">
+               <a href="/" class="nav-logo">
+                   <img src="images/logo.png" alt="某某移民公司">
+               </a>
+               <nav class="nav-menu-container">
+                   <button class="nav-toggle" aria-label="切换导航菜单">
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                   </button>
+                   <ul class="nav-menu">
+                       <li><a href="index.html" class="nav-link">首页</a></li>
+                       <li><a href="immigration-info.html" class="nav-link">移民信息</a></li>
+                       <li><a href="eb1a-requirement.html" class="nav-link">EB1-A申请条件</a></li>
+                       <li><a href="successful-cases.html" class="nav-link active">成功案例</a></li>
+                       <li><a href="overseas-real-estate.html" class="nav-link">海外房产</a></li>
+                       <li><a href="about-us.html" class="nav-link">关于我们</a></li>
+                   </ul>
+               </nav>
+               <div class="nav-actions">
+                   <button class="btn btn-primary" id="consultBtn">预约咨询</button>
+               </div>
+           </div>
+       </header>
+
+       <main>
+           <!-- 页面标题区域 -->
+           <section class="page-header">
+               <div class="container">
+                   <h1 class="page-title">成功案例展示</h1>
+                   <p class="page-description">500+成功案例，98%通过率，助力精英人才实现美国梦</p>
+               </div>
+           </section>
+
+           <!-- 数据统计 -->
+           <section class="statistics section">
+               <div class="container">
+                   <div class="stats-grid">
+                       <div class="stat-item">
+                           <div class="stat-number">500+</div>
+                           <div class="stat-label">成功案例</div>
+                       </div>
+                       <div class="stat-item">
+                           <div class="stat-number">98%</div>
+                           <div class="stat-label">通过率</div>
+                       </div>
+                       <div class="stat-item">
+                           <div class="stat-number">3-6</div>
+                           <div class="stat-label">月平均办理周期</div>
+                       </div>
+                       <div class="stat-item">
+                           <div class="stat-number">10+</div>
+                           <div class="stat-label">年专业经验</div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 案例分类筛选 -->
+           <section class="case-filter section bg-light">
+               <div class="container">
+                   <div class="filter-options">
+                       <button class="filter-btn active" data-filter="all">全部案例</button>
+                       <button class="filter-btn" data-filter="science">科研学者</button>
+                       <button class="filter-btn" data-filter="art">艺术领域</button>
+                       <button class="filter-btn" data-filter="education">教育领域</button>
+                       <button class="filter-btn" data-filter="business">商业领域</button>
+                       <button class="filter-btn" data-filter="sports">体育领域</button>
+                   </div>
+               </div>
+           </section>
+        
+           <!-- 案例展示 -->
+           <section class="cases-showcase section">
+               <div class="container">
+                   <div class="cases-grid" id="casesGrid">
+                       <!-- 科研学者案例 -->
+                       <div class="case-card" data-category="science">
+                           <div class="case-image">
+                               <img src="images/case1.jpg" alt="张博士案例">
+                               <div class="case-tag">科研学者</div>
+                           </div>
+                           <div class="case-content">
+                               <h3>材料科学专家6个月获批</h3>
+                               <div class="case-details">
+                                   <p><i class="fas fa-user-graduate"></i> 背景：清华大学博士</p>
+                                   <p><i class="fas fa-clock"></i> 用时：6个月</p>
+                                   <p><i class="fas fa-file-alt"></i> 论文引用200+</p>
+                               </div>
+                               <p class="case-summary">申请人在材料科学领域发表多篇高影响因子论文，获得多项发明专利...</p>
+                               <button class="btn btn-outline" onclick="showCaseDetail('case1')">查看详情</button>
+                           </div>
+                       </div>
+
+                       <!-- 技术人才案例 -->
+                       <div class="case-card" data-category="tech">
+                           <!-- 案例内容结构类似 -->
+                       </div>
+
+                       <!-- 更多案例卡片... -->
+                   </div>
+                   
+                   <div class="load-more">
+                       <button class="btn btn-primary" id="loadMoreBtn">加载更多案例</button>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 客户评价 -->
+           <section class="testimonials section bg-light">
+               <div class="container">
+                   <h2 class="section-title">客户评价</h2>
+                   <div class="testimonials-slider">
+                       <div class="testimonial-card">
+                           <div class="testimonial-content">
+                               <i class="fas fa-quote-left"></i>
+                               <p>从咨询到获批全程非常顺利，团队专业水平高，服务态度好，强烈推荐！</p>
+                           </div>
+                           <div class="testimonial-author">
+                               <img src="images/client1.jpg" alt="客户评价">
+                               <div class="author-info">
+                                   <h4>张先生</h4>
+                                   <p>科技公司CTO</p>
+                               </div>
+                           </div>
+                       </div>
+                       <!-- 更多评价卡片... -->
+                   </div>
+               </div>
+           </section>
+
+           <!-- 成功案例统计 -->
+           <section class="success-rate section">
+               <div class="container">
+                   <h2 class="section-title">成功案例分布</h2>
+                   <div class="stats-container">
+                       <div class="stat-chart">
+                           <canvas id="successRateChart"></canvas>
+                       </div>
+                       <div class="stat-legend">
+                           <div class="legend-item">
+                               <span class="legend-color science"></span>
+                               <span class="legend-text">科研学者 40%</span>
+                           </div>
+                           <div class="legend-item">
+                               <span class="legend-color art"></span>
+                               <span class="legend-text">艺术领域 25%</spa>
+                           </div>
+                           <div class="legend-item">
+                               <span class="legend-color education"></span>
+                               <span class="legend-text">教育领域 15%</span>
+                           </div>
+                           <div class="legend-item">
+                               <span class="legend-color business"></span>
+                               <span class="legend-text">商业领域 15%</span>
+                           </div>
+                           <div class="legend-item">
+                               <span class="legend-color sports"></span>
+                               <span class="legend-text">体育领域 5%</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 评估CTA -->
+           <section class="evaluation-cta section bg-primary text-white">
+               <div class="container">
+                   <div class="cta-content">
+                       <h2>想知道您是否符合申请条件？</h2>
+                       <p>立即进行免费资格评估，专业顾问为您分析</p>
+                       <button class="btn btn-light btn-lg" onclick="startEvaluation()">免费评估</button>
+                   </div>
+               </div>
+           </section>
+       </main>
+
+       <!-- 页脚 -->
+       <footer class="footer">
+           <!-- 复用页脚内容 -->
+       </footer>
+
+       <!-- 案例详情弹窗 -->
+       <div id="caseModal" class="modal">
+           <div class="modal-content">
+               <span class="close">&times;</span>
+               <div id="caseDetail"></div>
+           </div>
+       </div>
+   </div>
+
+   <!-- 返回顶部按钮 -->
+   <button class="back-to-top" aria-label="返回顶部">
+       <i class="fas fa-arrow-up"></i>
+   </button>
+
+   <script src="js/main.js"></script>
+   <script src="js/cases.js"></script>
+</body>
+</html>

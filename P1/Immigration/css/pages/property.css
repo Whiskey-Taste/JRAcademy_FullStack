@@ -1,0 +1,318 @@
+/* 页面标题区域 */
+.page-header {
+    background-color: var(--bg-light);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.page-description {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 房产筛选器 */
+.property-filter {
+    background-color: var(--bg-light);
+    padding: var(--space-lg) 0;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+}
+
+.filter-select {
+    padding: var(--space-sm);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: var(--bg-white);
+}
+
+/* 房产列表 */
+.property-listings {
+    padding: var(--space-xl) 0;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.property-card {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.property-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.1);
+}
+
+.property-tag {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    font-size: var(--font-xs);
+}
+
+.property-content {
+    padding: var(--space-lg);
+}
+
+.property-content h3 {
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.property-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+.property-info span {
+    display: flex;
+    align-items: center;
+}
+
+.property-info i {
+    margin-right: var(--space-sm);
+}
+
+.property-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+.property-location i {
+    margin-right: var(--space-sm);
+}
+
+.property-price {
+    font-size: var(--font-lg);
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.property-features {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.property-features span {
+    background-color: var(--bg-light);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    font-size: var(--font-xs);
+    color: var(--text-secondary);
+}
+
+.load-more {
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+/* 投资优势 */
+.investment-benefits {
+    background-color: var(--bg-light);
+    padding: var(--space-xl) 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.benefit-card {
+    text-align: center;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.benefit-card h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+}
+
+/* 购房流程 */
+.purchase-process {
+    padding: var(--space-xl) 0;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.process-step {
+    text-align: center;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.step-content h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+}
+
+/* 咨询CTA */
+.consultation-cta {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.cta-content h2 {
+    margin-bottom: var(--space-md);
+}
+
+.cta-content p {
+    margin-bottom: var(--space-lg);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 房产详情模态框 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    padding: var(--space-lg);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal .close {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    font-size: var(--font-lg);
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .property-grid,
+    .benefits-grid,
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .property-card {
+        margin-bottom: var(--space-md);
+    }
+
+    .purchase-process .process-step {
+        margin-bottom: var(--space-md);
+    }
+}

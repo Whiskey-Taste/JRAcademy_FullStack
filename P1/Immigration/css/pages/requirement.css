@@ -1,0 +1,239 @@
+/* 页面标题区域 */
+.page-header {
+    background-color: var(--bg-light);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.page-description {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 核心条件概览 */
+.requirements-overview {
+    padding: var(--space-xl) 0;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.requirement-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.requirement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.requirement-header {
+    margin-bottom: var(--space-md);
+}
+
+.requirement-header i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.requirement-header h3 {
+    color: var(--text-primary);
+}
+
+/* 评估标准详解 */
+.evaluation-criteria {
+    background-color: var(--bg-light);
+    padding: var(--space-xl) 0;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.criteria-item {
+    position: relative;
+    background-color: var(--bg-white);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.criteria-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.criteria-number {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.criteria-item h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+/* 在线评估工具 */
+.evaluation-tool {
+    padding: var(--space-xl) 0;
+}
+
+.evaluation-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.evaluation-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.evaluation-intro h3 {
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.evaluation-intro p {
+    color: var(--text-secondary);
+}
+
+.evaluation-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.criteria-checklist {
+    margin-bottom: var(--space-lg);
+}
+
+.criteria-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.criteria-option input {
+    margin-right: var(--space-md);
+}
+
+.criteria-option span {
+    color: var(--text-secondary);
+}
+
+.evaluation-result {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background-color: var(--bg-light);
+    border-radius: 8px;
+}
+
+/* 申请材料清单 */
+.required-documents {
+    background-color: var(--bg-light);
+    padding: var(--space-xl) 0;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.document-category {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.document-category h3 {
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.document-list {
+    list-style: none;
+}
+
+.document-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+}
+
+.document-list i {
+    margin-right: var(--space-md);
+    color: var(--primary-color);
+}
+
+/* 咨询CTA */
+.consultation-cta {
+    text-align: center;
+    padding: var(--space-xl) 0;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.consultation-cta h2 {
+    margin-bottom: var(--space-md);
+}
+
+.consultation-cta p {
+    margin-bottom: var(--space-lg);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .requirements-grid,
+    .criteria-grid,
+    .evaluation-form-container,
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .evaluation-form-container {
+        padding: var(--space-lg);
+    }
+
+    .page-header {
+        padding: var(--space-lg) var(--space-md);
+    }
+}

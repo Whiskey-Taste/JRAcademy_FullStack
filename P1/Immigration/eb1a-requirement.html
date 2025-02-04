@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>EB1-A申请条件 | 某某移民公司</title>
+   <meta name="description" content="详细了解美国EB1-A杰出人才移民申请条件、评估标准及所需材料">
+   <meta name="keywords" content="EB1-A申请条件,杰出人才移民,移民材料,申请标准">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/global.css">
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/pages/requirement.css">
+</head>
+<body class="requirement-page" data-page="requirement">
+   <div class="page-wrapper">
+       <!-- 导航栏 -->
+       <header class="header">
+           <div class="nav-container">
+               <a href="/" class="nav-logo">
+                   <img src="images/logo.png" alt="某某移民公司">
+               </a>
+               <nav class="nav-menu-container">
+                   <button class="nav-toggle" aria-label="切换导航菜单">
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                   </button>
+                   <ul class="nav-menu">
+                       <li><a href="index.html" class="nav-link">首页</a></li>
+                       <li><a href="immigration-info.html" class="nav-link">移民信息</a></li>
+                       <li><a href="eb1a-requirement.html" class="nav-link active">EB1-A申请条件</a></li>
+                       <li><a href="successful-cases.html" class="nav-link">成功案例</a></li>
+                       <li><a href="overseas-real-estate.html" class="nav-link">海外房产</a></li>
+                       <li><a href="about-us.html" class="nav-link">关于我们</a></li>
+                   </ul>
+               </nav>
+               <div class="nav-actions">
+                   <button class="btn btn-primary" id="consultBtn">预约咨询</button>
+               </div>
+           </div>
+       </header>
+
+       <main>
+           <!-- 页面标题区域 -->
+           <section class="page-header">
+               <div class="container">
+                   <h1 class="page-title">EB1-A申请条件</h1>
+                   <p class="page-description">详细了解美国杰出人才移民（EB1-A）的申请标准和评估体系</p>
+               </div>
+           </section>
+
+           <!-- 核心条件说明 -->
+           <section class="requirements-overview section">
+               <div class="container">
+                   <h2 class="section-title">基本申请要求</h2>
+                   <div class="requirements-grid">
+                       <div class="requirement-card">
+                           <div class="requirement-header">
+                               <i class="fas fa-trophy"></i>
+                               <h3>国际认可的重要奖项</h3>
+                           </div>
+                           <p>例如：诺贝尔奖、图灵奖、奥斯卡奖等国际性重要奖项</p>
+                       </div>
+                       <div class="requirement-card">
+                           <div class="requirement-header">
+                               <i class="fas fa-users"></i>
+                               <h3>专业协会会员资格</h3>
+                           </div>
+                           <p>成为需要杰出成就才能加入的专业协会会员</p>
+                       </div>
+                       <div class="requirement-card">
+                           <div class="requirement-header">
+                               <i class="fas fa-newspaper"></i>
+                               <h3>媒体报道</h3>
+                           </div>
+                           <p>在主流媒体上对个人工作或成就的报道</p>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 评估标准详解 -->
+           <section class="evaluation-criteria section bg-light">
+               <div class="container">
+                   <h2 class="section-title">十项评估标准</h2>
+                   <p class="section-description">申请人需满足以下十项标准中的至少三项</p>
+                   <div class="criteria-grid">
+                       <div class="criteria-item">
+                           <span class="criteria-number">01</span>
+                           <h3>国家级或国际级奖项</h3>
+                           <p>在科学、艺术、教育、商业等领域获得的国家级或国际级奖项和荣誉</p>
+                       </div>
+                       <div class="criteria-item">
+                           <span class="criteria-number">02</span>
+                           <h3>专业协会会员资格</h3>
+                           <p>成为要求杰出成就作为入会标准的专业协会会员</p>
+                       </div>
+                       <div class="criteria-item">
+                           <span class="criteria-number">03</span>
+                           <h3>媒体报道</h3>
+                           <p>个人工作在专业期刊、主流媒体、贸易出版物等的相关报道</p>
+                       </div>
+                       <!-- 更多评估标准... -->
+                   </div>
+               </div>
+           </section>
+
+           <!-- 在线评估工具 -->
+           <section class="evaluation-tool section">
+               <div class="container">
+                   <h2 class="section-title">EB1-A资格在线评估</h2>
+                   <div class="evaluation-form-container">
+                       <div class="evaluation-intro">
+                           <h3>快速评估您是否符合申请条件</h3>
+                           <p>请选择您符合的条件，系统将为您进行初步评估</p>
+                       </div>
+                       <form id="evaluationForm" class="evaluation-form">
+                           <div class="criteria-checklist">
+                               <div class="criteria-group">
+                                   <label class="criteria-option">
+                                       <input type="checkbox" name="criteria" value="awards">
+                                       <span>获得过重要奖项或荣誉</span>
+                                   </label>
+                                   <label class="criteria-option">
+                                       <input type="checkbox" name="criteria" value="membership">
+                                       <span>专业协会会员资格</span>
+                                   </label>
+                                   <!-- 更多选项... -->
+                               </div>
+                           </div>
+                           <button type="submit" class="btn btn-primary btn-lg">立即评估</button>
+                       </form>
+                       <div id="evaluationResult" class="evaluation-result" style="display: none;">
+                           <!-- 评估结果将通过JavaScript动态显示 -->
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 所需材料清单 -->
+           <section class="required-documents section bg-light">
+               <div class="container">
+                   <h2 class="section-title">申请材料清单</h2>
+                   <div class="documents-grid">
+                       <div class="document-category">
+                           <h3>基础材料</h3>
+                           <ul class="document-list">
+                               <li><i class="fas fa-file"></i> 护照复印件</li>
+                               <li><i class="fas fa-graduation-cap"></i> 学历证书</li>
+                               <li><i class="fas fa-user"></i> 个人简历</li>
+                               <li><i class="fas fa-briefcase"></i> 工作证明</li>
+                           </ul>
+                       </div>
+                       <div class="document-category">
+                           <h3>专业成就证明</h3>
+                           <ul class="document-list">
+                               <li><i class="fas fa-trophy"></i> 获奖证书</li>
+                               <li><i class="fas fa-certificate"></i> 专利证书</li>
+                               <li><i class="fas fa-book"></i> 学术论文</li>
+                               <li><i class="fas fa-newspaper"></i> 媒体报道</li>
+                           </ul>
+                       </div>
+                       <!-- 更多材料分类... -->
+                   </div>
+               </div>
+           </section>
+
+           <!-- 咨询预约 -->
+           <section class="consultation-cta section">
+               <div class="container">
+                   <div class="cta-content">
+                       <h2>免费咨询</h2>
+                       <p>专业顾问为您详细分析申请条件，制定个性化方案</p>
+                       <button class="btn btn-primary btn-lg" onclick="openConsultation()">预约咨询</button>
+                   </div>
+               </div>
+           </section>
+       </main>
+
+       <!-- 页脚 -->
+       <footer class="footer">
+           <!-- 复用页脚内容 -->
+       </footer>
+   </div>
+
+   <!-- 返回顶部按钮 -->
+   <button class="back-to-top" aria-label="返回顶部">
+       <i class="fas fa-arrow-up"></i>
+   </button>
+
+   <script src="js/main.js"></script>
+   <script src="js/evaluation.js"></script>
+</body>
+</html>

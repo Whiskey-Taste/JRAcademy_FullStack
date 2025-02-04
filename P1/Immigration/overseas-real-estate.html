@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>海外房产 | 某某移民公司</title>
+   <meta name="description" content="精选全球优质房产投资项目，为您的海外置业提供专业建议">
+   <meta name="keywords" content="海外房产,美国房产,房产投资,海外置业">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/global.css">
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/pages/property.css">
+</head>
+<body class="property-page" data-page="property">
+   <div class="page-wrapper">
+       <!-- 导航栏 -->
+       <header class="header">
+           <div class="nav-container">
+               <a href="/" class="nav-logo">
+                   <img src="images/logo.png" alt="某某移民公司">
+               </a>
+               <nav class="nav-menu-container">
+                   <button class="nav-toggle" aria-label="切换导航菜单">
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                       <span class="toggle-line"></span>
+                   </button>
+                   <ul class="nav-menu">
+                       <li><a href="index.html" class="nav-link">首页</a></li>
+                       <li><a href="immigration-info.html" class="nav-link">移民信息</a></li>
+                       <li><a href="eb1a-requirement.html" class="nav-link">EB1-A申请条件</a></li>
+                       <li><a href="successful-cases.html" class="nav-link">成功案例</a></li>
+                       <li><a href="overseas-real-estate.html" class="nav-link active">海外房产</a></li>
+                       <li><a href="about-us.html" class="nav-link">关于我们</a></li>
+                   </ul>
+               </nav>
+               <div class="nav-actions">
+                   <button class="btn btn-primary" id="consultBtn">预约咨询</button>
+               </div>
+           </div>
+       </header>
+
+       <main>
+           <!-- 页面标题区域 -->
+           <section class="page-header">
+               <div class="container">
+                   <h1 class="page-title">海外优质房产</h1>
+                   <p class="page-description">精选全球优质房产，助您实现资产增值与海外置业梦想</p>
+               </div>
+           </section>
+
+           <!-- 房产筛选器 -->
+           <section class="property-filter section bg-light">
+               <div class="container">
+                   <div class="filter-container">
+                       <div class="filter-group">
+                           <label for="location">位置</label>
+                           <select id="location" class="filter-select">
+                               <option value="">全部地区</option>
+                               <option value="los-angeles">洛杉矶</option>
+                               <option value="new-york">纽约</option>
+                               <option value="san-francisco">旧金山</option>
+                               <option value="seattle">西雅图</option>
+                           </select>
+                       </div>
+                       <div class="filter-group">
+                           <label for="price">价格范围</label>
+                           <select id="price" class="filter-select">
+                               <option value="">全部价格</option>
+                               <option value="0-500000">50万美元以下</option>
+                               <option value="500000-1000000">50-100万美元</option>
+                               <option value="1000000-2000000">100-200万美元</option>
+                               <option value="2000000+">200万美元以上</option>
+                           </select>
+                       </div>
+                       <div class="filter-group">
+                           <label for="type">房产类型</label>
+                           <select id="type" class="filter-select">
+                               <option value="">全部类型</option>
+                               <option value="apartment">公寓</option>
+                               <option value="house">独栋别墅</option>
+                               <option value="condo">联排别墅</option>
+                               <option value="commercial">商业地产</option>
+                           </select>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 房产列表 -->
+           <section class="property-listings section">
+               <div class="container">
+                   <div class="property-grid" id="propertyGrid">
+                       <!-- 房产项目1 -->
+                       <div class="property-card">
+                           <div class="property-image">
+                               <img src="images/property1.jpg" alt="洛杉矶豪华公寓">
+                               <span class="property-tag">热门</span>
+                           </div>
+                           <div class="property-content">
+                               <h3>洛杉矶市中心豪华公寓</h3>
+                               <div class="property-info">
+                                   <span><i class="fas fa-bed"></i> 3房</span>
+                                   <span><i class="fas fa-bath"></i> 2卫</span>
+                                   <span><i class="fas fa-ruler-combined"></i> 180㎡</span>
+                               </div>
+                               <div class="property-location">
+                                   <i class="fas fa-map-marker-alt"></i>
+                                   <span>洛杉矶市中心</span>
+                               </div>
+                               <div class="property-price">
+                                   <strong>$1,500,000</strong>
+                               </div>
+                               <div class="property-features">
+                                   <span>地铁沿线</span>
+                                   <span>学区房</span>
+                                   <span>配套完善</span>
+                               </div>
+                               <button class="btn btn-primary" onclick="showPropertyDetail('prop1')">查看详情</button>
+                           </div>
+                       </div>
+
+                       <!-- 更多房产卡片 -->
+                   </div>
+                   
+                   <div class="load-more">
+                       <button class="btn btn-primary" id="loadMoreProperties">加载更多</button>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 投资优势 -->
+           <section class="investment-benefits section bg-light">
+               <div class="container">
+                   <h2 class="section-title">为什么选择美国房产投资</h2>
+                   <div class="benefits-grid">
+                       <div class="benefit-card">
+                           <i class="fas fa-chart-line"></i>
+                           <h3>稳定升值</h3>
+                           <p>美国房地产市场成熟，价格稳定增长，投资风险可控</p>
+                       </div>
+                       <div class="benefit-card">
+                           <i class="fas fa-university"></i>
+                           <h3>教育资源</h3>
+                           <p>优质学区房源，为子女教育提供保障</p>
+                       </div>
+                       <div class="benefit-card">
+                           <i class="fas fa-shield-alt"></i>
+                           <h3>产权保护</h3>
+                           <p>完善的法律体系，产权受到严格保护</p>
+                       </div>
+                       <div class="benefit-card">
+                           <i class="fas fa-hand-holding-usd"></i>
+                           <h3>租金回报</h3>
+                           <p>成熟的租赁市场，提供稳定的现金流收入</p>
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 购房流程 -->
+           <section class="purchase-process section">
+               <div class="container">
+                   <h2 class="section-title">购房流程</h2>
+                   <div class="process-timeline">
+                       <div class="process-step">
+                           <div class="step-number">1</div>
+                           <div class="step-content">
+                               <h3>需求评估</h3>
+                               <p>了解您的投资预算和需求</p>
+                           </div>
+                       </div>
+                       <!-- 更多步骤... -->
+                       <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>需求匹配</h3>
+                            <p>根据您的预算和需求匹配当前市面上的房产</p>
+                        </div>
+                    </div>
+                   </div>
+               </div>
+           </section>
+
+           <!-- 咨询预约 -->
+           <section class="consultation-cta section bg-primary text-white">
+               <div class="container">
+                   <div class="cta-content">
+                       <h2>准备开始您的海外置业计划？</h2>
+                       <p>我们的专业顾问将为您提供一对一咨询服务</p>
+                       <button class="btn btn-light btn-lg" onclick="openConsultation()">预约看房</button>
+                   </div>
+               </div>
+           </section>
+       </main>
+
+       <!-- 页脚 -->
+       <footer class="footer">
+           <!-- 复用页脚内容 -->
+       </footer>
+
+       <!-- 房产详情弹窗 -->
+       <div id="propertyModal" class="modal">
+           <div class="modal-content">
+               <span class="close">&times;</span>
+               <div id="propertyDetail"></div>
+           </div>
+       </div>
+   </div>
+
+   <!-- 返回顶部按钮 -->
+   <button class="back-to-top">
+       <i class="fas fa-arrow-up"></i>
+   </button>
+
+   <script src="js/main.js"></script>
+   <script src="js/property.js"></script>
+</body>
+</html>

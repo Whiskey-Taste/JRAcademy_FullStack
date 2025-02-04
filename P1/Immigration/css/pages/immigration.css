@@ -1,0 +1,230 @@
+/* 页面标题区域 */
+.page-header {
+    background-color: var(--bg-light);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.page-description {
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 签证类别概览 */
+.visa-categories {
+    padding: var(--space-xl) 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.category-card {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.category-card.highlighted {
+    border: 2px solid var(--primary-color);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.category-header h3 {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.category-header i {
+    margin-right: var(--space-sm);
+    color: var(--primary-color);
+}
+
+.priority-tag {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    font-size: var(--font-xs);
+}
+
+.subcategories {
+    border-top: 1px solid #e0e0e0;
+    padding-top: var(--space-lg);
+}
+
+.subcategory {
+    margin-bottom: var(--space-md);
+}
+
+.subcategory h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.subcategory ul {
+    list-style-type: disc;
+    padding-left: var(--space-lg);
+}
+
+.subcategory li {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+/* 申请流程 */
+.application-process {
+    background-color: var(--bg-light);
+    padding: var(--space-xl) 0;
+}
+
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.step-content h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+}
+
+/* 常见问题 */
+.faq-section {
+    padding: var(--space-xl) 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.faq-item h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+}
+
+/* 咨询CTA */
+.consultation-cta {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.cta-content h2 {
+    margin-bottom: var(--space-md);
+}
+
+.cta-content p {
+    margin-bottom: var(--space-lg);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .category-grid,
+    .process-timeline,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-timeline {
+        flex-direction: column;
+    }
+
+    .process-timeline::before {
+        top: 0;
+        left: 30px;
+        height: 100%;
+        width: 2px;
+    }
+
+    .process-step {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--space-lg);
+    }
+
+    .step-number {
+        margin-right: var(--space-lg);
+        margin-bottom: 0;
+    }
+
+    .step-content {
+        text-align: left;
+    }
+}

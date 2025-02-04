@@ -1,0 +1,277 @@
+/* 公司简介部分 */
+.company-intro {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-normal);
+}
+
+.intro-image img:hover {
+    transform: scale(1.03);
+}
+
+/* 公司统计数据 */
+.company-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-lg);
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 var(--space-sm);
+    transition: all var(--transition-normal);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: var(--font-sm);
+}
+
+/* 公司价值观 */
+.our-values {
+    background-color: var(--bg-light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+/* 团队成员 */
+.our-team {
+    background-color: var(--bg-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.team-member {
+    text-align: center;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.our-team .container {
+    max-width: 1200px; /* 增加容器最大宽度 */
+    margin: 0 auto; /* 居中显示 */
+    padding: 80px 20px; /* 调整上下内边距 */
+}
+
+.member-image {
+    width: 300px; /* 设置图片固定宽度为500px */
+    height: auto; /* 根据4:5比例计算高度 */
+    margin: 0 auto; /* 居中显示 */
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform var(--transition-normal);
+}
+
+.member-image img:hover {
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: var(--space-lg);
+}
+
+.member-info h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.member-title {
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+}
+
+.member-description {
+    color: var(--text-secondary);
+}
+
+/* 服务流程 */
+.service-process {
+    background-color: var(--bg-light);
+}
+
+.process-timeline {
+    position: relative;
+    padding: var(--space-lg) 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    position: relative;
+    padding-left: var(--space-xl);
+    border-left: 2px solid var(--primary-color);
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 公司资质 */
+.company-credentials .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+}
+
+.credential-card {
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-normal);
+}
+
+.credential-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+}
+
+/* 联系我们 */
+.contact-section {
+    background-color: var(--bg-light);
+}
+
+.contact-section .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.contact-info .info-items {
+    margin-top: var(--space-lg);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.info-item i {
+    margin-right: var(--space-md);
+    color: var(--primary-color);
+    font-size: var(--font-lg);
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    .intro-content,
+    .values-grid,
+    .team-grid,
+    .contact-section .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        margin: var(--space-sm) 0;
+    }
+
+    .intro-image,
+    .intro-text {
+        flex: none;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
