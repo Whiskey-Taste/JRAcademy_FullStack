@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2025年塔斯马尼亚探险之旅，提供独特的自然和文化体验。">
+    <title>2025塔斯马尼亚探险之旅</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <h1>2025塔斯马尼亚探险之旅</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#tours">旅游路线</a></li>
+                    <li><a href="#booking">预订信息</a></li>
+                    <li><a href="#tips">旅行准备</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首页 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>探索塔斯马尼亚的壮丽景色</h2>
+            <p>2025年，加入我们的独特探险之旅，体验自然与文化的完美结合。</p>
+            <a href="#tours" class="btn">查看路线</a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="container">
+        <h2>关于我们</h2>
+        <p>我们是一家专注于塔斯马尼亚旅游的专业公司，致力于为游客提供独特而难忘的旅行体验。</p>
+        <p>我们的团队由本地导游和旅行专家组成，熟悉塔斯马尼亚的每一个角落。</p>
+    </section>
+
+    <!-- 旅游路线 -->
+    <section id="tours" class="container">
+        <h2>旅游路线</h2>
+        <div class="tour-list">
+            <div class="tour-item">
+                <img src="images/tour1.jpg" alt="自然探险路线">
+                <h3>自然探险路线</h3>
+                <p>5天4夜，探索塔斯马尼亚的原始森林和壮丽海岸线。</p>
+                <a href="#booking" class="btn">立即预订</a>
+            </div>
+            <div class="tour-item">
+                <img src="images/tour2.jpg" alt="文化之旅">
+                <h3>文化之旅</h3>
+                <p>3天2夜，深入了解塔斯马尼亚的历史和文化遗产。</p>
+                <a href="#booking" class="btn">立即预订</a>
+            </div>
+            <div class="tour-item">
+                <img src="images/tour3.jpg" alt="美食之旅">
+                <h3>美食之旅</h3>
+                <p>4天3夜，品尝塔斯马尼亚的本地美食和葡萄酒。</p>
+                <a href="#booking" class="btn">立即预订</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预订信息 -->
+    <section id="booking" class="container">
+        <h2>预订信息</h2>
+        <p>请填写以下表单以预订您的旅行路线。</p>
+        <form action="submit_booking.php" method="post">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="tour">选择路线:</label>
+            <select id="tour" name="tour" required>
+                <option value="自然探险路线">自然探险路线</option>
+                <option value="文化之旅">文化之旅</option>
+                <option value="美食之旅">美食之旅</option>
+            </select>
+            <button type="submit" class="btn">提交预订</button>
+        </form>
+    </section>
+
+    <!-- 旅行准备 -->
+    <section id="tips" class="container">
+        <h2>旅行准备</h2>
+        <p>以下是一些旅行前的建议：</p>
+        <ul>
+            <li>查看天气预报，准备合适的衣物。</li>
+            <li>携带必要的旅行证件和保险。</li>
+            <li>了解塔斯马尼亚的文化和习俗。</li>
+        </ul>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="container">
+        <h2>联系我们</h2>
+        <p>如有任何问题，请随时联系我们：</p>
+        <p>电话: +61 123 456 789</p>
+        <p>邮箱: info@tasmaniatours2025.com</p>
+        <p>地址: 塔斯马尼亚霍巴特市中心</p>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 塔斯马尼亚探险之旅</p>
+            <p>关注我们: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+</body>
+</html>
