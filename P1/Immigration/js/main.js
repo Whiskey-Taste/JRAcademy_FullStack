@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 返回顶部按钮功能
     const backToTopButton = document.querySelector('.back-to-top');
-    
+
     if (backToTopButton) {
-        // 监听滚动事件
         window.addEventListener('scroll', function() {
-            // 当页面滚动超过300像素时显示按钮
             if (window.scrollY > 300) {
                 backToTopButton.style.display = 'flex';
             } else {
@@ -13,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // 点击返回顶部
         backToTopButton.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -22,29 +19,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 导航菜单切换（移动端）
+    // **导航菜单切换（移动端）**
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // 防止点击按钮时触发关闭
             navMenu.classList.toggle('show-menu');
             navToggle.classList.toggle('active');
         });
+
+        // **点击页面其他地方关闭菜单**
+        document.addEventListener('click', function(event) {
+            if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+                navMenu.classList.remove('show-menu');
+                navToggle.classList.remove('active');
+            }
+        });
+    } else {
+        console.error("导航菜单或按钮未找到");
     }
 
     // 预约咨询按钮通用处理
     const consultButtons = document.querySelectorAll('#consultBtn, .consult-btn');
     consultButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // 打开咨询弹窗或跳转到联系页面
             openConsultationModal();
         });
     });
 
     // 咨询弹窗
     function openConsultationModal() {
-        // 创建模态框（如果不存在）
         let modal = document.getElementById('consultModal');
         if (!modal) {
             modal = document.createElement('div');
@@ -74,34 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.appendChild(modal);
         }
 
-        // 显示模态框
         modal.style.display = 'flex';
 
-        // 关闭按钮事件
         const closeBtn = modal.querySelector('.close');
         closeBtn.onclick = function() {
             modal.style.display = 'none';
         };
 
-        // 点击模态框外部关闭
         modal.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = 'none';
             }
         };
 
-        // 表单提交处理
         const form = modal.querySelector('form');
         form.onsubmit = function(e) {
             e.preventDefault();
             
-            // 简单表单验证
             const name = form.name.value.trim();
             const phone = form.phone.value.trim();
             const email = form.email.value.trim();
             const message = form.message.value.trim();
 
-            // 验证规则
             const phoneRegex = /^1[3-9]\d{9}$/;
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -125,12 +125,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }
 
-            // 模拟提交
             const submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
             submitBtn.textContent = '正在提交...';
 
-            // 模拟异步提交
             setTimeout(() => {
                 alert('感谢您的咨询，我们将尽快与您联系！');
                 form.reset();
@@ -186,12 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const navToggle = document.querySelector('.nav-toggle');
 
         if (screenWidth <= 768) {
-            // 移动端菜单处理
             if (navMenu && navToggle) {
                 navMenu.classList.add('mobile-menu');
             }
         } else {
-            // 桌面端菜单处理
             if (navMenu && navToggle) {
                 navMenu.classList.remove('mobile-menu', 'show-menu');
                 navToggle.classList.remove('active');
@@ -209,5 +205,4 @@ document.addEventListener('DOMContentLoaded', function() {
 // 全局错误处理
 window.addEventListener('error', function(event) {
     console.error('发生了一个未捕获的错误:', event.error);
-    // 可以添加更多的错误处理逻辑，如上报错误
 });

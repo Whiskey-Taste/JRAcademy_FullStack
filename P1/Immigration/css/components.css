@@ -1,5 +1,6 @@
 /* 导航栏组件 */
 .header {
+    overflow: visible;
     background-color: var(--bg-white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: sticky;
@@ -236,11 +237,21 @@
 @media screen and (max-width: 768px) {
     .nav-menu {
         display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .nav-menu.show-menu {
+        display: block; /* 让菜单可见 */
     }
 
     .nav-toggle {
         display: flex;
-    }
 
     .footer-content {
         flex-direction: column;
