@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.container form input[type=text] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 60%;
+}
+.container form input[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.container form input[type=submit]:hover {
+  background-color: #0062cc;
+}
+.container ul {
+  list-style: none;
+}
+.container ul .icon img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container ul .temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.container ul .description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.container ul .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container ul .details > div {
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .container form {
+    flex-direction: column;
+  }
+  .container form input[type=text] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
