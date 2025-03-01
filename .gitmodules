@@ -1,0 +1,6 @@
+[submodule "P2/frontend/weather-app"]
+	path = P2/frontend/weather-app
+	url = https://github.com/Whiskey-Taste/weather-app.git
+[submodule "javascript-weather-app"]
+	path = javascript-weather-app
+	url = https://github.com/Whiskey-Taste/javascript-weather-app.git
