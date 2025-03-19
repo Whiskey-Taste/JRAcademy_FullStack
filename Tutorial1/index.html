@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Our first page" />
+    <meta name="keywords" content="html tutorial template" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f1f5f6;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-between {
+        justify-content: space-between;
+      }
+      .flex-center {
+        justify-content: center;
+        align-items: center;
+      }
+      .gap-10 {
+        gap: 10px;
+      }
+      .gap-5 {
+        gap: 5px;
+      }
+      .count-down-bg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #dd3842;
+        border-radius: 2px;
+        width: 45px;
+        height: 30px;
+        color: white;
+      }
+      .background-white {
+        background-color: white;
+      }
+      .best-prices-section .banner-img {
+        width: 40%;
+      }
+      .best-prices-section .product-card {
+        padding: 20px;
+        min-width: 25%;
+        width: 100%;
+        background-color: white;
+      }
+      .color-red {
+        color: red;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .background-red {
+        background-color: red;
+      }
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .discount {
+        left: 20px;
+        top: 20px;
+        padding: 5px 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="best-prices-section">
+      <div class="flex flex-between background-white">
+        <div>
+          <i></i>
+          <p><span class="color-red">Hot Deals!</span> Get our best prices</p>
+        </div>
+        <div class="flex flex-center gap-10">
+          <p>Hurry up! Offer ends in:</p>
+          <div class="flex gap-5">
+            <div class="count-down-bg">00</div>
+            <div class="count-down-bg">02</div>
+            <div class="count-down-bg">45</div>
+            <div class="count-down-bg">59</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex" style="width: 100%">
+        <img
+          class="banner-img"
+          src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_3.png?v=1673017886&width=3000"
+          alt=""
+        />
+        <div class="product-card relative">
+          <div class="absolute discount background-red">
+            <p>-59%</p>
+          </div>
+          <img
+            src="https://demo-uminex.myshopify.com/cdn/shop/products/products_15_1.jpg?v=1672302974&width=360"
+            alt=""
+          />
+          <div class="background-white">
+            <h2>Laptop MateBook 14 Ryzen Edition 256GB</h2>
+            <div>review</div>
+            <div>price</div>
+            <div>sold</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://demo-uminex.myshopify.com/cdn/shop/products/products_15_1.jpg?v=1672302974&width=360"
+            alt=""
+          />
+        </div>
+        <div class="product-card">
+          <img
+            src="https://demo-uminex.myshopify.com/cdn/shop/products/products_15_1.jpg?v=1672302974&width=360"
+            alt=""
+          />
+        </div>
+        <div class="product-card">
+          <img
+            src="https://demo-uminex.myshopify.com/cdn/shop/products/products_15_1.jpg?v=1672302974&width=360"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
