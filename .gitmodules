@@ -4,3 +4,6 @@
 [submodule "javascript-weather-app"]
 	path = javascript-weather-app
 	url = https://github.com/Whiskey-Taste/javascript-weather-app.git
+[submodule "es6-boilerplate"]
+	path = es6-boilerplate
+	url = https://github.com/Whiskey-Taste/es6-boilerplate.git
