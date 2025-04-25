@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="userInput" placeholder="Please enter your income:" />
+    <button onclick="calculateTax()">Submit</button>
+    <script>
+      function calculateTax() {
+        const income = document.getElementById("userInput").value;
+        let tax = 0;
+        if (income <= 18200) {
+          return tax;
+        } else if (income <= 45000) {
+          tax += (income - 18200) * 0.16;
+        } else if (income <= 135000) {
+          tax += (45000 - 18200) * 0.16 + (income - 45000) * 0.3;
+        } else if (income <= 190000) {
+          tax +=
+            (45000 - 18200) * 0.16 +
+            (135000 - 45000) * 0.3 +
+            (income - 135000) * 0.37;
+        } else if (income > 190000) {
+          tax +=
+            (45000 - 18200) * 0.16 +
+            (135000 - 45000) * 0.3 +
+            (190000 - 135000) * 0.37 +
+            (income - 190000) * 0.45;
+        }
+        alert("Your tax is:" + tax);
+      }
+    </script>
+  </body>
+</html>
