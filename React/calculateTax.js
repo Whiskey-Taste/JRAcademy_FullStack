@@ -47,7 +47,28 @@ calculateTax(200000, TaxTable_2024);
 // getStops(tickets) => Direct
 
 // const tickets = [{ origin: 'Mel', destination: 'HKG' }, { origin: 'HKG', destination: 'PVG' }]
-// getStops(tickets) => 1 stops
+// getStops(tickets) => 1 stop
 
-// const tickets = [{ origin: 'Mel', destination: 'SIN' }, { origin: 'SIN', destination: 'HKG' }, { origin: 'PVG', destination: 'HKG' }]
+// const tickets = [{ origin: 'Mel', destination: 'SIN' }, { origin: 'SIN', destination: 'HKG' }, { origin: 'HKG', destination: 'PVG' }]
 // getStops(tickets) => 2 stops
+
+// EasterEgg
+// 如果你的 Stops 是 10，返回 'Around the World'
+// tickets.length = 10
+// getStops(tickets) => Around the World
+
+// 符合人类思考方式的代码是最好的代码
+const SPECIAL_STOPS = {
+    0: 'Direct',
+    10: 'Around the World',
+}
+
+const pluralize = (num, word) => {
+    return num > 1 ? `${word}s` : word;
+}
+
+const getStops = (tickets) => {
+    const length = tickets.length - 1;
+
+    return SPECIAL_STOPS[length] || `${length} ${pluralize(length, 'stop')}`;
+}
