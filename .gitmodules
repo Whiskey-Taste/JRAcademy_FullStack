@@ -7,3 +7,6 @@
 [submodule "es6-boilerplate"]
 	path = es6-boilerplate
 	url = https://github.com/Whiskey-Taste/es6-boilerplate.git
+[submodule "React/Project/my-blog"]
+	path = React/Project/my-blog
+	url = ./React/Project/my-blog
