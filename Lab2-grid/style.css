@@ -1,1 +1,38 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #303032;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+  padding: 40px 0;
+}
+
+.cards {
+  grid-column: 2/span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+}
+
+.card {
+  grid-column-end: span 4;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card__image-container {
+  width: 100%;
+}
+.card__image-container img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

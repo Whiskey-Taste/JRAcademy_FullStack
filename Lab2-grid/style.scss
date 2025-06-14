@@ -1,0 +1,44 @@
+$spacing-unit:40px;
+$small-spacing:20px;
+$extra-small-spacing:10px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #303032;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr repeat(12,minmax(auto, 60px)) 1fr;
+    grid-gap: $spacing-unit;
+    padding: $spacing-unit 0;
+}
+
+.cards {
+    // start on column2 and span 12 columns
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(auto,60px));
+    grid-gap: $spacing-unit;
+}
+
+.card {
+    // span 4 columns
+    grid-column-end: span 4;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    &:hover {
+        transform: translateY(-8px);
+    }
+    &__image-container {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
